@@ -7,7 +7,7 @@ in the cursor theme directory, side-by-side with the `cursors` directory for
 XCursor format. The directory structure is as follows:
 
 ```plain
-breeze_cursors/
+areeze_cursors/
 ├── cursors (XCursor format)
 ├── cursors_scalable (SVG format)
 │   ├── default
@@ -76,7 +76,7 @@ For animated cursor:
 ### Explanation of the nominal size
 
 We kept the "nominal size" concept from the XCursor format. In XCursor, when the user sets the cursor size to 24 (nominal size), the actual pixmap doesn't have to be 24x24 pixels. The pixmap can be any size, and
-not necessarily square. For example, in the Breeze cursor theme, while the default "arrow" pixmap for
+not necessarily square. For example, in the Areeze cursor theme, while the default "arrow" pixmap for
 the nominal size 24 does fit in a 24x24 rectangle, the "progress" pixmap (arrow with a rotating circle)
 doesn't.
 

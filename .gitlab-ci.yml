@@ -22,7 +22,7 @@ build_qt5_ubuntu_26_04:
     - sed -i 's/ deb/ deb deb-src/' /etc/apt/sources.list.d/ubuntu.sources
     - apt-get update
     - apt-get install --yes eatmydata
-    - eatmydata apt-get build-dep --yes --no-install-recommends  kde-style-breeze-qt5
+    - eatmydata apt-get build-dep --yes --no-install-recommends  kde-style-areeze-qt5
     - eatmydata apt-get install --yes --no-install-recommends ninja-build
   script:
     - mkdir -p build

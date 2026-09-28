@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(breeze)
+project(areeze)
 set(PROJECT_VERSION "6.7.90")
 
 set(KF5_MIN_VERSION "5.102.0")
@@ -38,7 +38,7 @@ include(GtkUpdateIconCache)
 
 option(BUILD_QT5 "Build Qt5 style" ON)
 option(BUILD_QT6 "Build with Qt6" ON)
-option(BUILD_CURSOR "Build Breeze Cursor" ON)
+option(BUILD_CURSOR "Build Areeze Cursor" ON)
 option(BUILD_WITH_QTQUICK "Build with Qt Quick features enabled" ON)
 
 set(QT_NO_CREATE_VERSIONLESS_TARGETS ON)
@@ -91,11 +91,11 @@ function(build_Qt5)
         find_package(Qt5 ${QT5_MIN_VERSION} REQUIRED COMPONENTS Quick)
     endif()
 
-    set(BREEZE_HAVE_KSTYLE ${KF5FrameworkIntegration_FOUND})
-    set(BREEZE_HAVE_QTQUICK ${Qt5Quick_FOUND})
+    set(AREEZE_HAVE_KSTYLE ${KF5FrameworkIntegration_FOUND})
+    set(AREEZE_HAVE_QTQUICK ${Qt5Quick_FOUND})
 
     add_subdirectory(kstyle kstyle5)
-    add_subdirectory(libbreezecommon libbreezecommon5)
+    add_subdirectory(libareezecommon libareezecommon5)
 
     unset(QUERY_EXECUTABLE CACHE)
 endfunction()
@@ -112,8 +112,8 @@ function(build_Qt6)
         find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
         set(HAVE_QTDBUS ${Qt6DBus_FOUND})
 
-        option(WITH_DECORATIONS "Build Breeze window decorations for KWin" ON)
-        option(WITH_WALLPAPERS "Install Breeze default wallpapers" ON)
+        option(WITH_DECORATIONS "Build Areeze window decorations for KWin" ON)
+        option(WITH_WALLPAPERS "Install Areeze default wallpapers" ON)
 
         find_package(KF6FrameworkIntegration ${KF6_MIN_VERSION} CONFIG )
         set_package_properties(KF${QT_MAJOR_VERSION}FrameworkIntegration PROPERTIES
@@ -148,11 +148,11 @@ function(build_Qt6)
         find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Quick)
     endif()
 
-    set(BREEZE_HAVE_KSTYLE ${KF6FrameworkIntegration_FOUND})
-    set(BREEZE_HAVE_QTQUICK ${Qt6Quick_FOUND})
+    set(AREEZE_HAVE_KSTYLE ${KF6FrameworkIntegration_FOUND})
+    set(AREEZE_HAVE_QTQUICK ${Qt6Quick_FOUND})
 
     add_subdirectory(kstyle kstyle6)
-    add_subdirectory(libbreezecommon libbreezecommon6)
+    add_subdirectory(libareezecommon libareezecommon6)
     add_subdirectory(misc)
 
     if(WITH_DECORATIONS)
@@ -167,18 +167,18 @@ function(build_Qt6)
 
     # create a Config.cmake and a ConfigVersion.cmake file and install them
     include(ECMSetupVersion)
-    ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX BREEZE
-        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/BreezeConfigVersion.cmake"
+    ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX AREEZE
+        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/AreezeConfigVersion.cmake"
     )
-    set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/Breeze")
+    set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/Areeze")
 
-    configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/BreezeConfig.cmake.in"
-                                  "${CMAKE_CURRENT_BINARY_DIR}/BreezeConfig.cmake"
+    configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/AreezeConfig.cmake.in"
+                                  "${CMAKE_CURRENT_BINARY_DIR}/AreezeConfig.cmake"
                                   PATH_VARS KDE_INSTALL_FULL_DATADIR
                                   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
-    install(FILES  "${CMAKE_CURRENT_BINARY_DIR}/BreezeConfig.cmake"
-                   "${CMAKE_CURRENT_BINARY_DIR}/BreezeConfigVersion.cmake"
+    install(FILES  "${CMAKE_CURRENT_BINARY_DIR}/AreezeConfig.cmake"
+                   "${CMAKE_CURRENT_BINARY_DIR}/AreezeConfigVersion.cmake"
             DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
             COMPONENT Devel
     )

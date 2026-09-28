@@ -1,31 +1,31 @@
-add_definitions(-DTRANSLATION_DOMAIN="breeze_kwin_deco")
+add_definitions(-DTRANSLATION_DOMAIN="areeze_kwin_deco")
 
 ################# includes #################
-include_directories(${CMAKE_SOURCE_DIR}/libbreezecommon)
-include_directories(${CMAKE_BINARY_DIR}/libbreezecommon)
+include_directories(${CMAKE_SOURCE_DIR}/libareezecommon)
+include_directories(${CMAKE_BINARY_DIR}/libareezecommon)
 
 ################# newt target #################
 ### plugin classes
-set(breezedecoration_SRCS
-    breezebutton.cpp
-    breezedecoration.cpp
-    breezesettingsprovider.cpp
-    breezeexceptionlist.cpp
+set(areezedecoration_SRCS
+    areezebutton.cpp
+    areezedecoration.cpp
+    areezesettingsprovider.cpp
+    areezeexceptionlist.cpp
 )
 
 ### build library
-kconfig_add_kcfg_files(breezedecoration_SRCS breezesettings.kcfgc)
-add_library(breezedecoration MODULE
-    ${breezedecoration_SRCS}
-    ${breezedecoration_config_PART_FORMS_HEADERS})
+kconfig_add_kcfg_files(areezedecoration_SRCS areezesettings.kcfgc)
+add_library(areezedecoration MODULE
+    ${areezedecoration_SRCS}
+    ${areezedecoration_config_PART_FORMS_HEADERS})
 
-set_target_properties(breezedecoration PROPERTIES
-    OUTPUT_NAME org.kde.breeze
+set_target_properties(areezedecoration PROPERTIES
+    OUTPUT_NAME org.kde.areeze
 )
 
-target_link_libraries(breezedecoration
+target_link_libraries(areezedecoration
     PRIVATE
-        breezecommon6
+        areezecommon6
         Qt6::DBus
         KF6::CoreAddons
         KF6::ConfigGui
@@ -36,8 +36,8 @@ target_link_libraries(breezedecoration
         KF6::ColorScheme
 )
 
-install(TARGETS breezedecoration DESTINATION ${KDE_INSTALL_PLUGINDIR}/${KDECORATION_PLUGIN_DIR})
-install(FILES breezesettingsdata.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME breeze-decoration.kcfg)
+install(TARGETS areezedecoration DESTINATION ${KDE_INSTALL_PLUGINDIR}/${KDECORATION_PLUGIN_DIR})
+install(FILES areezesettingsdata.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME areeze-decoration.kcfg)
 
 add_subdirectory(config)
 

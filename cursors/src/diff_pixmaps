@@ -1,7 +1,7 @@
 #!/bin/bash
 # Compare generated pixmaps with the old 
-# Place the old pixmaps in Breeze/build.old, the new ones in Breeze/build, and run this script
-# in Breeze/
+# Place the old pixmaps in Areeze/build.old, the new ones in Areeze/build, and run this script
+# in Areeze/
 
 for i in build/x*; do
     echo $i

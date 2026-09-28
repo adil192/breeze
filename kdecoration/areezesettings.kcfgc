@@ -1,0 +1,7 @@
+File=areezesettingsdata.kcfg
+ClassName=InternalSettings
+NameSpace=Areeze
+Singleton=false
+Mutators=true
+GlobalEnums=true
+Notifiers=OutlineCloseButton

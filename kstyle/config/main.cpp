@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////////////
-// breezeanimationconfigitem.h
+// areezeanimationconfigitem.h
 // animation configuration item
 // -------------------
 //
@@ -19,16 +19,16 @@
 //__________________________________________
 int main(int argc, char *argv[])
 {
-    KLocalizedString::setApplicationDomain("breeze_style_config");
+    KLocalizedString::setApplicationDomain("areeze_style_config");
 
     QApplication app(argc, argv);
-    app.setApplicationName(i18n("Breeze Settings"));
-    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("breeze-settings")));
+    app.setApplicationName(i18n("Areeze Settings"));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("areeze-settings")));
 
     KCMultiDialog dialog;
-    dialog.setWindowTitle(i18n("Breeze Settings"));
-    dialog.addModule(KPluginMetaData(QStringLiteral("kstyle_config/breezestyleconfig")));
-    dialog.addModule(KPluginMetaData(QStringLiteral("org.kde.kdecoration3.kcm/kcm_breezedecoration.so")));
+    dialog.setWindowTitle(i18n("Areeze Settings"));
+    dialog.addModule(KPluginMetaData(QStringLiteral("kstyle_config/areezestyleconfig")));
+    dialog.addModule(KPluginMetaData(QStringLiteral("org.kde.kdecoration3.kcm/kcm_areezedecoration.so")));
     dialog.show();
 
     const auto children = dialog.findChildren<QAbstractScrollArea *>();

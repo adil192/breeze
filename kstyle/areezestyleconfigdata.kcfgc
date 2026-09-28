@@ -1,0 +1,6 @@
+File=areeze.kcfg
+ClassName=StyleConfigData
+NameSpace=Areeze
+Singleton=true
+Mutators=true
+GlobalEnums=true

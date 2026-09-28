@@ -1,0 +1,443 @@
+# Translation of areeze_kwin_deco.po into Serbian.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: areeze_kwin_deco\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"PO-Revision-Date: 2017-12-17 18:00+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: config/areezeexceptionlistwidget.cpp:88
+#, kde-format
+msgid "New Exception - Areeze Settings"
+msgstr "Novi izuzetak — postavke Povetarca"
+
+#: config/areezeexceptionlistwidget.cpp:136
+#, kde-format
+msgid "Edit Exception - Areeze Settings"
+msgstr "Uređivanje izuzetka — postavke Povetarca"
+
+#: config/areezeexceptionlistwidget.cpp:167
+#, kde-format
+msgid "Question - Areeze Settings"
+msgstr "Pitanje — postavke Povetarca"
+
+#: config/areezeexceptionlistwidget.cpp:168
+#, kde-format
+msgid "Remove selected exception?"
+msgstr "Ukloniti izabrani izuzetak?"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: config/areezeexceptionlistwidget.cpp:170
+#: config/ui/areezeexceptionlistwidget.ui:91
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
+
+#: config/areezeexceptionlistwidget.cpp:300
+#, kde-format
+msgid "Warning - Areeze Settings"
+msgstr "Upozorenje — postavke Povetarca"
+
+#: config/areezeexceptionlistwidget.cpp:300
+#, kde-format
+msgid "Regular Expression syntax is incorrect"
+msgstr "Loša sintaksa regularnog izraza"
+
+# >> @title:column
+#: config/areezeexceptionmodel.cpp:17
+#, kde-format
+msgid "Exception Type"
+msgstr "tip izuzetka"
+
+# >> @title:column
+#: config/areezeexceptionmodel.cpp:17
+#, kde-format
+msgid "Regular Expression"
+msgstr "regularni izraz"
+
+# >> @item window property type
+#. i18n: ectx: property (text), item, widget (QComboBox, exceptionType)
+#: config/areezeexceptionmodel.cpp:36 config/ui/areezeexceptiondialog.ui:72
+#, kde-format
+msgid "Window Title"
+msgstr "naslov prozora"
+
+# >> @item window property type
+#. i18n: ectx: property (text), item, widget (QComboBox, exceptionType)
+#: config/areezeexceptionmodel.cpp:40 config/ui/areezeexceptiondialog.ui:67
+#, kde-format
+msgid "Window Class Name"
+msgstr "ime klase prozora"
+
+#: config/areezeexceptionmodel.cpp:55
+#, kde-format
+msgid "Enable/disable this exception"
+msgstr "Uključi/isključi ovaj izuzetak"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: config/ui/areezeconfigurationui.ui:36
+#, kde-format
+msgid "General"
+msgstr "Opšte"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: config/ui/areezeconfigurationui.ui:45
+#, kde-format
+msgid "Tit&le alignment:"
+msgstr "&Poravnanje naslova:"
+
+# >> @option:radio
+#. i18n: ectx: property (text), item, widget (QComboBox, titleAlignment)
+#: config/ui/areezeconfigurationui.ui:56
+#, kde-format
+msgid "Left"
+msgstr "lijevo"
+
+# >> @option:radio
+#. i18n: ectx: property (text), item, widget (QComboBox, titleAlignment)
+#: config/ui/areezeconfigurationui.ui:61
+#, kde-format
+msgid "Center"
+msgstr "sredina"
+
+# >> @option:radio
+#. i18n: ectx: property (text), item, widget (QComboBox, titleAlignment)
+#: config/ui/areezeconfigurationui.ui:66
+#, kde-format
+msgid "Center (Full Width)"
+msgstr "sredina (pune širine)"
+
+# >> @option:radio
+#. i18n: ectx: property (text), item, widget (QComboBox, titleAlignment)
+#: config/ui/areezeconfigurationui.ui:71
+#, kde-format
+msgid "Right"
+msgstr "desno"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: config/ui/areezeconfigurationui.ui:79
+#, kde-format
+msgid "B&utton size:"
+msgstr "Veličina &dugmadi:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, buttonSize)
+#: config/ui/areezeconfigurationui.ui:90
+#, kde-format
+msgid "Tiny"
+msgstr "sićušna"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (QComboBox, shadowSize)
+#: config/ui/areezeconfigurationui.ui:95 config/ui/areezeconfigurationui.ui:202
+#, kde-format
+msgctxt "@item:inlistbox Button size:"
+msgid "Small"
+msgstr "mala"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (QComboBox, shadowSize)
+#: config/ui/areezeconfigurationui.ui:100
+#: config/ui/areezeconfigurationui.ui:207
+#, kde-format
+msgctxt "@item:inlistbox Button size:"
+msgid "Medium"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (QComboBox, shadowSize)
+#: config/ui/areezeconfigurationui.ui:105
+#: config/ui/areezeconfigurationui.ui:212
+#, kde-format
+msgctxt "@item:inlistbox Button size:"
+msgid "Large"
+msgstr "velika"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (QComboBox, shadowSize)
+#: config/ui/areezeconfigurationui.ui:110
+#: config/ui/areezeconfigurationui.ui:217
+#, kde-format
+msgctxt "@item:inlistbox Button size:"
+msgid "Very Large"
+msgstr "vrlo velika"
+
+#. i18n: ectx: property (text), widget (QCheckBox, outlineCloseButton)
+#: config/ui/areezeconfigurationui.ui:118
+#, kde-format
+msgid "Draw a circle around close button"
+msgstr "Krug oko dugmeta za zatvaranje"
+
+#. i18n: ectx: property (text), widget (QCheckBox, drawBorderOnMaximizedWindows)
+#: config/ui/areezeconfigurationui.ui:125
+#, kde-format
+msgid "Draw border on maximized and tiled windows"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, drawBorderOnMaximizedWindowsHelpLabel)
+#: config/ui/areezeconfigurationui.ui:150
+#, kde-format
+msgid ""
+"This setting will allow you to resize from window edges touching screen "
+"edges. Scrollbars and window close buttons will shift positions and will not "
+"touch screen edges."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, drawBackgroundGradient)
+#: config/ui/areezeconfigurationui.ui:162
+#, fuzzy, kde-format
+#| msgid "Draw window background gradient"
+msgid "Draw titlebar background gradient"
+msgstr "Preliv u pozadini prozora"
+
+#. i18n: ectx: property (text), widget (QCheckBox, roundedCorners)
+#: config/ui/areezeconfigurationui.ui:169
+#, fuzzy, kde-format
+#| msgid "Add handle to resize windows with no border"
+msgid "Round bottom corners of windows with no borders"
+msgstr "Ručka za promenu veličine prozora bez ivica"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: config/ui/areezeconfigurationui.ui:177
+#, kde-format
+msgid "Shadows and Outline"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: config/ui/areezeconfigurationui.ui:186
+#, fuzzy, kde-format
+#| msgid "Shadows"
+msgid "Shadow size:"
+msgstr "Senke"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, shadowSize)
+#: config/ui/areezeconfigurationui.ui:197
+#, kde-format
+msgctxt "@item:inlistbox Button size:"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: config/ui/areezeconfigurationui.ui:225
+#, fuzzy, kde-format
+#| msgctxt "strength of the shadow (from transparent to opaque)"
+#| msgid "S&trength:"
+msgctxt "strength of the shadow (from transparent to opaque)"
+msgid "Shadow strength:"
+msgstr "&Jačina:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, shadowStrength)
+#: config/ui/areezeconfigurationui.ui:235
+#, no-c-format, kde-format
+msgid "%"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: config/ui/areezeconfigurationui.ui:248
+#, fuzzy, kde-format
+#| msgid "Shadows"
+msgid "Shadow color:"
+msgstr "Senke"
+
+#. i18n: ectx: property (text), widget (QCheckBox, drawOutline)
+#: config/ui/areezeconfigurationui.ui:258
+#, fuzzy, kde-format
+#| msgid "Use window title"
+msgid "Draw window outline"
+msgstr "Po naslovu prozora"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: config/ui/areezeconfigurationui.ui:266
+#, kde-format
+msgid "Window-Specific Overrides"
+msgstr "Potiskivanja posebna po prozoru"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AreezeExceptionDialog)
+#: config/ui/areezeexceptiondialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Dijalog"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: config/ui/areezeexceptiondialog.ui:20
+#, kde-format
+msgid "Window Identification"
+msgstr "Identifikacija prozora"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: config/ui/areezeexceptiondialog.ui:26
+#, kde-format
+msgid "&Matching window property: "
+msgstr "&Svojstvo prozora za poklapanje: "
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: config/ui/areezeexceptiondialog.ui:39
+#, kde-format
+msgid "Regular expression &to match: "
+msgstr "&Regularni izraz za poklapanje: "
+
+#. i18n: ectx: property (text), widget (QPushButton, detectDialogButton)
+#: config/ui/areezeexceptiondialog.ui:52
+#, fuzzy, kde-format
+#| msgid "Detect Window Properties"
+msgid "Detect Window Properties…"
+msgstr "Otkrij svojstva prozora"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: config/ui/areezeexceptiondialog.ui:83
+#, kde-format
+msgid "Decoration Options"
+msgstr "Opcije dekoracije"
+
+#. i18n: ectx: property (text), widget (QCheckBox, borderSizeCheckBox)
+#: config/ui/areezeexceptiondialog.ui:89
+#, kde-format
+msgid "Border size:"
+msgstr "Veličina ivica:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, hideTitleBar)
+#: config/ui/areezeexceptiondialog.ui:96
+#, kde-format
+msgid "Hide window title bar"
+msgstr "Bez naslovne trake prozora"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:107
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "No Border"
+msgstr "bez ivice"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:112
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "No Side Borders"
+msgstr "bez bočne ivice"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:117
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "Tiny"
+msgstr "sićušne"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:122
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "Normal"
+msgstr "normalne"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:127
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "Large"
+msgstr "velike"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:132
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "Very Large"
+msgstr "vrlo velike"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:137
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "Huge"
+msgstr "ogromne"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:142
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "Very Huge"
+msgstr "vrlo ogromne"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, borderSizeComboBox)
+#: config/ui/areezeexceptiondialog.ui:147
+#, kde-format
+msgctxt "@item:inlistbox Border size:"
+msgid "Oversized"
+msgstr "neizmijerne"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpButton)
+#: config/ui/areezeexceptionlistwidget.ui:70
+#, kde-format
+msgid "Move Up"
+msgstr "Pomjeri nagore"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownButton)
+#: config/ui/areezeexceptionlistwidget.ui:77
+#, kde-format
+msgid "Move Down"
+msgstr "Pomjeri nadolje"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: config/ui/areezeexceptionlistwidget.ui:84
+#, kde-format
+msgid "Add"
+msgstr "Dodaj"
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: config/ui/areezeexceptionlistwidget.ui:98
+#, kde-format
+msgid "Edit"
+msgstr "Uredi"
+
+#~ msgid "Si&ze:"
+#~ msgstr "&Veličina:"
+
+#~ msgid "Color:"
+#~ msgstr "Boja:"
+
+#, fuzzy
+#~| msgid "Draw separator between Title Bar and Window"
+#~ msgid "Draw separator under active window's titlebar"
+#~ msgstr "Razdvajač između naslovne trake i prozora"
+
+#~ msgid "Allow resizing maximized windows from window edges"
+#~ msgstr "Maksimizovanim prozorima može da se menja veličina preko ivica"
+
+#~ msgid "Animations"
+#~ msgstr "Animacije"
+
+#~ msgid "Anima&tions duration:"
+#~ msgstr "&Trajanje animacija:"
+
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid "Enable animations"
+#~ msgstr "Animacije"
+
+#~ msgid "Information about Selected Window"
+#~ msgstr "Podaci o izabranom prozoru"
+
+#~ msgid "Class: "
+#~ msgstr "Klasa: "
+
+#~ msgid "Title: "
+#~ msgstr "Naslov: "
+
+#~ msgid "Window Property Selection"
+#~ msgstr "Izbor svojstva prozora"
+
+#~ msgid "Use window class (whole application)"
+#~ msgstr "Po klasi prozora (cio program)"

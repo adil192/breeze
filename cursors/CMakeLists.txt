@@ -1,3 +1,3 @@
 add_subdirectory(src)
-add_subdirectory(Breeze)
-add_subdirectory(Breeze_Light)
+add_subdirectory(Areeze)
+add_subdirectory(Areeze_Light)
