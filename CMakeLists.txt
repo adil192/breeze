@@ -112,8 +112,8 @@ function(build_Qt6)
         find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
         set(HAVE_QTDBUS ${Qt6DBus_FOUND})
 
-        option(WITH_DECORATIONS "Build Areeze window decorations for KWin" ON)
-        option(WITH_WALLPAPERS "Install Areeze default wallpapers" ON)
+        option(WITH_DECORATIONS "Build Areeze window decorations for KWin" OFF)
+        option(WITH_WALLPAPERS "Install Areeze default wallpapers" OFF)
 
         find_package(KF6FrameworkIntegration ${KF6_MIN_VERSION} CONFIG )
         set_package_properties(KF${QT_MAJOR_VERSION}FrameworkIntegration PROPERTIES
