@@ -4547,7 +4547,6 @@ bool Style::drawPanelButtonCommandPrimitive(const QStyleOption *option, QPainter
     // NOTE: Using hover animation for all pen animations to prevent flickering when closing the menu.
     _animations->widgetStateEngine().updateState(widget, AnimationHover, (hovered || visualFocus || down) && enabled);
     qreal bgAnimation = _animations->widgetStateEngine().opacity(widget, AnimationFocus);
-    qreal penAnimation = _animations->widgetStateEngine().opacity(widget, AnimationHover);
 
     QHash<QByteArray, bool> stateProperties;
     stateProperties["enabled"] = enabled;
@@ -4562,7 +4561,7 @@ bool Style::drawPanelButtonCommandPrimitive(const QStyleOption *option, QPainter
     stateProperties["isActiveWindow"] = widget ? widget->isActiveWindow() : true;
     stateProperties["roundButton"] = roundButton;
 
-    _helper->renderButtonFrame(painter, option->rect, option->palette, stateProperties, bgAnimation, penAnimation);
+    _helper->renderButtonFrame(painter, option->rect, option->palette, stateProperties, bgAnimation);
 
     return true;
 }
@@ -4585,7 +4584,6 @@ bool Style::drawPanelButtonToolPrimitive(const QStyleOption *option, QPainter *p
     // NOTE: Using hover animation for all pen animations to prevent flickering when closing the menu.
     _animations->widgetStateEngine().updateState(widget, AnimationHover, (hovered || visualFocus || down) && enabled);
     qreal bgAnimation = _animations->widgetStateEngine().opacity(widget, AnimationFocus);
-    qreal penAnimation = _animations->widgetStateEngine().opacity(widget, AnimationHover);
 
     QRect baseRect = option->rect;
     // adjust frame in case of menu
@@ -4608,7 +4606,7 @@ bool Style::drawPanelButtonToolPrimitive(const QStyleOption *option, QPainter *p
     stateProperties["hasNeutralHighlight"] = hasNeutralHighlight;
     stateProperties["isActiveWindow"] = widget ? widget->isActiveWindow() : true;
 
-    _helper->renderButtonFrame(painter, baseRect, option->palette, stateProperties, bgAnimation, penAnimation);
+    _helper->renderButtonFrame(painter, baseRect, option->palette, stateProperties, bgAnimation);
     if (painter->hasClipping()) {
         painter->setClipping(false);
     }
@@ -5007,7 +5005,6 @@ bool Style::drawIndicatorButtonDropDownPrimitive(const QStyleOption *option, QPa
     // NOTE: Using hover animation for all pen animations to prevent flickering when closing the menu.
     _animations->widgetStateEngine().updateState(widget, AnimationHover, (hovered || visualFocus || down) && enabled);
     qreal bgAnimation = _animations->widgetStateEngine().opacity(widget, AnimationFocus);
-    qreal penAnimation = _animations->widgetStateEngine().opacity(widget, AnimationHover);
 
     QRect baseRect = option->rect;
     const auto clipRect = visualRect(option, baseRect);
@@ -5025,12 +5022,12 @@ bool Style::drawIndicatorButtonDropDownPrimitive(const QStyleOption *option, QPa
     stateProperties["hasNeutralHighlight"] = hasNeutralHighlight;
     stateProperties["isActiveWindow"] = widget ? widget->isActiveWindow() : true;
 
-    _helper->renderButtonFrame(painter, baseRect, option->palette, stateProperties, bgAnimation, penAnimation);
+    _helper->renderButtonFrame(painter, baseRect, option->palette, stateProperties, bgAnimation);
 
     QRectF frameRect = _helper->strokedRect(_helper->shadowedRect(baseRect));
 
     // also render separator
-    if (!flat || activeFocus || hovered || down || checked || penAnimation != AnimationData::OpacityInvalid) {
+    if (!flat || activeFocus || hovered || down || checked) {
         painter->setBrush(Qt::NoBrush);
         if (option->direction == Qt::RightToLeft) {
             QRectF separatorRect = frameRect.adjusted(0, 0, -Metrics::Frame_FrameRadius - PenWidth::Shadow, 0);
@@ -5498,7 +5495,6 @@ bool Style::drawIconButtonControl(const QStyleOption *option, QPainter *painter,
     _animations->widgetStateEngine().updateState(widget, AnimationFocus, down && enabled);
     _animations->widgetStateEngine().updateState(widget, AnimationHover, (hovered || visualFocus || down) && enabled);
     const qreal bgAnimation = _animations->widgetStateEngine().opacity(widget, AnimationFocus);
-    const qreal penAnimation = _animations->widgetStateEngine().opacity(widget, AnimationHover);
 
     const QHash<QByteArray, bool> stateProperties{
         {"enabled", enabled},
@@ -5509,7 +5505,7 @@ bool Style::drawIconButtonControl(const QStyleOption *option, QPainter *painter,
         {"roundButton", true},
     };
 
-    _helper->renderButtonFrame(painter, overlayOption.rect, overlayOption.palette, stateProperties, bgAnimation, penAnimation);
+    _helper->renderButtonFrame(painter, overlayOption.rect, overlayOption.palette, stateProperties, bgAnimation);
 
     drawPushButtonLabelControl(&overlayOption, painter, widget);
 
@@ -7834,7 +7830,6 @@ bool Style::drawComboBoxComplexControl(const QStyleOptionComplex *option, QPaint
             // NOTE: Using hover animation for all pen animations to prevent flickering when closing the menu.
             _animations->widgetStateEngine().updateState(widget, AnimationHover, (hovered || visualFocus || down || checked) && enabled);
             qreal bgAnimation = _animations->widgetStateEngine().opacity(widget, AnimationFocus);
-            qreal penAnimation = _animations->widgetStateEngine().opacity(widget, AnimationHover);
 
             QHash<QByteArray, bool> stateProperties;
             stateProperties["enabled"] = enabled;
@@ -7846,7 +7841,7 @@ bool Style::drawComboBoxComplexControl(const QStyleOptionComplex *option, QPaint
             stateProperties["hasNeutralHighlight"] = hasNeutralHighlight;
             stateProperties["isActiveWindow"] = widget ? widget->isActiveWindow() : true;
 
-            _helper->renderButtonFrame(painter, option->rect, option->palette, stateProperties, bgAnimation, penAnimation);
+            _helper->renderButtonFrame(painter, option->rect, option->palette, stateProperties, bgAnimation);
         }
     }
 
